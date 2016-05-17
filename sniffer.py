@@ -1,7 +1,3 @@
-#Packet sniffer in python
-#For Linux - Sniffs all incoming and outgoing packets :)
-#Silver Moon (m00n.silv3r@gmail.com)
-
 import socket, sys
 from struct import *
 
@@ -11,7 +7,6 @@ def eth_addr (a) :
   return b
 
 #create a AF_PACKET type raw socket (thats basically packet level)
-#define ETH_P_ALL    0x0003          /* Every packet (be careful!!!) */
 try:
     s = socket.socket( socket.AF_PACKET , socket.SOCK_RAW , socket.ntohs(0x0003))
 except socket.error , msg:
